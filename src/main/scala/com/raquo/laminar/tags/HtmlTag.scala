@@ -17,5 +17,6 @@ class HtmlTag[+Ref <: dom.html.Element] (
   }
 
   /** Create a Scala DOM Builder element from this Tag */
+  // MEMO: ここでRefを作ってる!
   protected def build(): ReactiveHtmlElement[Ref] = new ReactiveHtmlElement(this, DomApi.createHtmlElement(this))
 }
